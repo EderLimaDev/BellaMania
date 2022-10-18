@@ -20,6 +20,14 @@ header .logo img{
     width: 200px;
     margin: auto;
 }
+
+/*botão oculto menu*/
+.btn-menu{
+    font-size: 60px;
+    padding-left: 10px;
+    display: none;
+
+}
 header .header-items{
     border-radius: 12px;
     margin: 20px auto;
@@ -81,6 +89,8 @@ header .header-items{
     margin: 15px auto;
     width: 80%;
     display: flex;
+    min-width: 500px;
+    
     
 }
 .products-list{
@@ -91,6 +101,7 @@ height: 100%;
 margin: auto;
 justify-content: space-around;
 flex-wrap: wrap;
+
 }
 
 .products-list .produto{
@@ -100,7 +111,7 @@ flex-wrap: wrap;
     border-top-right-radius: 12px;
     align-items: center;
     border: 1px solid black;
-
+    min-width: auto;
 
 }
 .products-list .produto img{
@@ -108,6 +119,8 @@ flex-wrap: wrap;
    height: 300px;    
    border-top-left-radius: 12px;
    border-top-right-radius: 12px;
+   margin: auto;
+   
 }
 .products-list .produto p{
     color: black;
@@ -157,6 +170,7 @@ footer div p{
     background: #FFDE59;
     border-radius: 12px;
 }
+
 /* Botão para top */
 .scroll-btn{
     position: fixed;
@@ -166,6 +180,7 @@ footer div p{
     background: #FFDE59;
     border-radius: 12px;
 }
+
 .scroll-btn a{
     text-decoration: none;
     color: black;
@@ -228,4 +243,51 @@ footer div p{
 .conteudo-sobre p{
     text-align: center;
     padding-top: 40px;
+}
+
+
+/*Resposividade media query*/
+
+@media (max-width: 500px){
+    .header-items .choose-bar{
+        display: block;
+        padding-top: 80px;
+        position: absolute;
+    }
+    .btn-menu{
+        display: block;
+    }
+}
+
+@media (max-width: 433px){
+    .products-list .produto img{
+        width:194px;
+        height: 200px;    
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        margin: auto;
+        
+     }
+
+    .products-list .produto p{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    width: 192px;
+    height: 29px;
+    background-color: #FFDE59;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    }
+    #price{
+    font-size: 17px;
+}
+
+
+
+
+
 }
