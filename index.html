@@ -10,7 +10,11 @@
     
     <!--Boxicons CDN Link-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--Title e Icon-->
     <title>Bella Mania</title>
+    <link rel="icon" href="/assets/bella-Icon.ico">
+    
 </head>
 <body>
 
@@ -28,9 +32,9 @@
         
 
         <div class="header-items">
-            <div class="btn-menu">
-                <label><i class='bx bx-menu'></i></label>
-            </div>
+            
+            <button id="btn"><i class='bx bx-menu'></i></button>
+            
             <ul class="choose-bar">
                 <li><a href="#">Produtos</a></li>
                 <li><a href="#footer">Atendimento</a></li>
@@ -240,8 +244,38 @@
         
     </footer>
 
+    <script>
 
+        let btn = document.querySelector("#btn");
+        let header = document.querySelector(".header-items");
+        let choseBar = document.querySelector(".choose-bar");
+        let socialBar = document.querySelector(".social-media");
+        
+            btn.onclick = function(){
+               
+                header.classList.toggle("active");
+                choseBar.classList.toggle("active");
+                socialBar.classList.toggle("active");
+        
+            }
+        
+        
+        
+        </script>
 
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
+

@@ -22,12 +22,24 @@ header .logo img{
 }
 
 /*botão oculto menu*/
-.btn-menu{
-    font-size: 60px;
+button{
+    background: transparent;
+    position: absolute;
+    border: none;
+    font-size: 50px;
     padding-left: 10px;
+    transition: all 0.5s ease;
     display: none;
-
+   
 }
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    color: red;
+}
+
+
+
 header .header-items{
     border-radius: 12px;
     margin: 20px auto;
@@ -35,6 +47,16 @@ header .header-items{
     height: 70px;
     display: flex;
     background-color: #FFDE59;
+
+}
+header .header-items.active{
+    border-radius: 12px;
+    margin: 20px auto;
+    width: 80%;
+    height: 200px;
+    align-items: flex-start;
+    background-color: #FFDE59;
+    
 
 }
 .header-items .choose-bar{
@@ -47,6 +69,19 @@ header .header-items{
     font-weight: bold;
 
 }
+
+.header-items .choose-bar.active{
+    width: 80%;
+    list-style: none;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left:20px;
+
+}
+
+
 
 .header-items .choose-bar a{
     text-decoration: none;
@@ -65,10 +100,23 @@ header .header-items{
 .header-items .social-media{
     list-style: none;
     margin: auto;
-    width: 30%;
+    width: 25%;
     display: flex;
     justify-content: space-around;
     font-size: 50px;
+    text-align: center;
+    padding-right: 10px;
+    
+
+}
+
+.header-items .social-media.active{
+    list-style: none;
+    margin: auto;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 40px;
     text-align: center;
     
 
@@ -248,13 +296,22 @@ footer div p{
 
 /*Resposividade media query*/
 
-@media (max-width: 500px){
-    .header-items .choose-bar{
-        display: block;
-        padding-top: 80px;
-        position: absolute;
+@media (max-width: 730px){
+    .choose-bar li a{
+        display: none;
     }
-    .btn-menu{
+    .choose-bar.active li a{
+        display: block;
+        
+    }
+    .social-media li i{
+        display:none;
+    }
+    .social-media.active li i{
+        display: block;
+    }
+
+    button{
         display: block;
     }
 }
@@ -285,9 +342,6 @@ footer div p{
     #price{
     font-size: 17px;
 }
-
-
-
 
 
 }
