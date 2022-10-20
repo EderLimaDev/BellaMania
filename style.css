@@ -30,15 +30,13 @@ button{
     padding-left: 10px;
     transition: all 0.5s ease;
     display: none;
-   
+    
 }
 button:hover{
     cursor: pointer;
     opacity: 0.8;
     color: red;
 }
-
-
 
 header .header-items{
     border-radius: 12px;
@@ -294,6 +292,8 @@ footer div p{
 }
 
 
+
+
 /*Resposividade media query*/
 
 @media (max-width: 730px){
@@ -345,3 +345,5 @@ footer div p{
 
 
 }
+
+
