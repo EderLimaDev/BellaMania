@@ -32,7 +32,6 @@
         
 
         <div class="header-items">
-            
             <button id="btn"><i class='bx bx-menu'></i></button>
             
             <ul class="choose-bar">
@@ -256,10 +255,18 @@
                 header.classList.toggle("active");
                 choseBar.classList.toggle("active");
                 socialBar.classList.toggle("active");
-    
-            }
+                
+            
         
+            }
+            
+        let scrollBtn = document.querySelector(".scroll-btn");
 
+            window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+                scrollBtn.classList.toggle("active");
+            }
       
     
             

@@ -51,7 +51,7 @@ header .header-items.active{
     border-radius: 12px;
     margin: 20px auto;
     width: 80%;
-    height: 200px;
+    height: 220px;
     align-items: flex-start;
     background-color: #FFDE59;
     
@@ -225,6 +225,7 @@ footer div p{
     padding:  7px 12px;
     background: #FFDE59;
     border-radius: 12px;
+    visibility: hidden;
 }
 
 .scroll-btn a{
@@ -235,6 +236,9 @@ footer div p{
 .scroll-btn i{
     font-size: 40px;
     
+}
+.scroll-btn.active{
+    visibility: visible;
 }
 
 
@@ -261,7 +265,7 @@ footer div p{
     align-content: center;
 }
 .header-sobre h1{
-    font-size: 30px;
+    font-size: 25px;
     margin: auto;
     color: black;
 }
@@ -279,16 +283,23 @@ footer div p{
     color: black;
 }
 .conteudo-sobre{
+    background-image: url(./assets/backSobre2.jpg);
+    color:rgb(11, 11, 11);
+    text-shadow: black;
     display: block;
-    background-color: white;
     width: 80%;
-    height: 100%;
-    margin: auto;
+    height: 90%;
+    margin: 20px auto;
     border-radius: 12px;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }
 .conteudo-sobre p{
-    text-align: center;
+    text-justify:distribute-all-lines;
     padding-top: 40px;
+    font-weight: bold;
 }
 
 
@@ -345,5 +356,3 @@ footer div p{
 
 
 }
-
-
