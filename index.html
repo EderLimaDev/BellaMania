@@ -20,9 +20,7 @@
 
     <!--Scrool to top button-->
     <div class="scroll-btn">
-        <a href="#header">
         <i class='bx bxs-up-arrow-alt'></i>
-        </a>
     </div>   
 
     <header id="header">
@@ -250,30 +248,40 @@
         let choseBar = document.querySelector(".choose-bar");
         let socialBar = document.querySelector(".social-media");
         
-            btn.onclick = function(){
+        btn.onclick = function(){
              
-                header.classList.toggle("active");
-                choseBar.classList.toggle("active");
-                socialBar.classList.toggle("active");
+            header.classList.toggle("active");
+            choseBar.classList.toggle("active");
+            socialBar.classList.toggle("active");
+        }
+        
+        onresize = function(){
+            if(this.screen.width >= 700){
+                header.classList.remove("active");
+                choseBar.classList.remove("active");
+                socialBar.classList.remove("active");
                 
-            
+            }
+        }
+
+
         
-            }
-            
-        let scrollBtn = document.querySelector(".scroll-btn");
-
-            window.onscroll = function() {myFunction()};
-
-            function myFunction() {
-                scrollBtn.classList.toggle("active");
-            }
-      
+    const scrollBtn = document.querySelector(".scroll-btn");
     
-            
+    
+    scrollBtn.addEventListener("click", () =>{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 
-          
 
-        
+    });
+    
+    window.addEventListener("scroll", function(){
+        scrollBtn.classList.toggle("active", window.scrollY > 500)
+
+    })
+
+    
         
     </script>
 

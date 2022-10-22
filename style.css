@@ -6,6 +6,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin-left: 5%;
     margin-right: 5%;
@@ -54,6 +58,7 @@ header .header-items.active{
     height: 220px;
     align-items: flex-start;
     background-color: #FFDE59;
+    transition: all 0.7 ease;
     
 
 }
@@ -225,12 +230,7 @@ footer div p{
     padding:  7px 12px;
     background: #FFDE59;
     border-radius: 12px;
-    visibility: hidden;
-}
-
-.scroll-btn a{
-    text-decoration: none;
-    color: black;
+    opacity: 0;
 }
 
 .scroll-btn i{
@@ -238,7 +238,7 @@ footer div p{
     
 }
 .scroll-btn.active{
-    visibility: visible;
+    opacity: 1;
 }
 
 
