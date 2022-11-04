@@ -284,6 +284,7 @@ footer div p{
 }
 .conteudo-sobre{
     background-image: url(./assets/backSobre2.jpg);
+    background-repeat: no-repeat;
     color:rgb(11, 11, 11);
     text-shadow: black;
     display: block;
